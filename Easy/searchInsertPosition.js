@@ -14,7 +14,7 @@ var searchInsert = function (nums, target) {
 
 // binary search
 var searchInsert2 = function (nums, target) {
-  binarySearch(nums, target);
+  return binarySearch(nums, target, 0, nums.length - 1);
 };
 
 var binarySearch = function (nums, target, low, high) {
@@ -24,7 +24,3 @@ var binarySearch = function (nums, target, low, high) {
   if (array[mid] > target) return binarySearch(nums, target, low, mid - 1);
   if (array[mid] < target) return binarySearch(nums, target, mid + 1, high);
 };
-
-console.log(searchInsert2([1, 3, 5, 6], 5));
-console.log(searchInsert2([1, 3, 5, 6], 2));
-console.log(searchInsert2([1, 3, 5, 6], 7));
